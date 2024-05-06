@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Web</title>
+</head>
+
+<body>
+  <div>
+    <strong>Hornsby Campus</strong>
+    <p>We love React.JS</p>
+    <button id="likeButton" data-liked="false">Like</button>
+    <span> Like count = </span> <span id="likeCount">0</span>
+  </div>
+
+  <script>
+    const btn = document.getElementById("likeButton");
+    const likeCount = document.getElementById("likeCount");
+    btn.addEventListener("click", () => {
+      likeCount.textContent = parseInt(likeCount.textContent) + 1
+    });
+
+  </script>
+
+  <style>
+    div {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
+    }
+
+    strong {
+      font-size: 20px;
+      color: #333;
+    }
+
+    p {
+      margin-top: 10px;
+      color: #555;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    span {
+      margin-left: 10px;
+      color: #555;
+    }
+
+    #likeCount {
+      font-weight: bold;
+    }
+  </style>
+</body>
+<!-- window.innerHeight -->
+</html>
