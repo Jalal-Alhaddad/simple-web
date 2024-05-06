@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Destructuring Examples</title>
+  <!-- Prism CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <h2>1. Array Destructuring:</h2>
+  <pre><code class="language-javascript">
+const numbers = [1, 2, 3, 4, 5];
+
+// Destructuring assignment
+const [first, second, ...rest] = numbers;
+
+console.log(first); // Output: 1
+console.log(second); // Output: 2
+console.log(rest); // Output: [3, 4, 5]
+</code></pre>
+
+  <h2>2. Object Destructuring:</h2>
+  <pre><code class="language-javascript">
+const person = {
+  name: 'Alice',
+  age: 30,
+  country: 'USA'
+};
+
+// Destructuring assignment
+const { name, age, country } = person;
+
+console.log(name); // Output: Alice
+console.log(age); // Output: 30
+console.log(country); // Output: USA
+</code></pre>
+
+  <h2>3. Function Parameter Destructuring:</h2>
+  <pre><code class="language-javascript">
+// Function with object parameter
+const printPersonInfo = ({ name, age, country }) => {
+  console.log(`Name: ${name}, Age: ${age}, Country: ${country}`);
+};
+
+const person = {
+  name: 'Bob',
+  age: 25,
+  country: 'Canada'
+};
+
+// Passing object to function with destructuring
+printPersonInfo(person);
+// Output: Name: Bob, Age: 25, Country: Canada
+</code></pre>
+
+  <h2>4. Default Values in Destructuring:</h2>
+  <pre><code class="language-javascript">
+const person = {
+  name: 'Charlie',
+  age: 35
+};
+
+// Destructuring assignment with default value
+const { name, age, country = 'Unknown' } = person;
+
+console.log(name); // Output: Charlie
+console.log(age); // Output: 35
+console.log(country); // Output: Unknown
+</code></pre>
+
+  <h2>5. Nested Destructuring:</h2>
+  <pre><code class="language-javascript">
+const user = {
+  id: 123,
+  info: {
+    name: 'David',
+    email: 'david@example.com'
+  }
+};
+
+// Nested destructuring assignment
+const { id, info: { name, email } } = user;
+
+console.log(id); // Output: 123
+console.log(name); // Output: David
+console.log(email); // Output: david@example.com
+</code></pre>
+
+  <!-- Prism JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0"></script>
+</body>
+
+</html>

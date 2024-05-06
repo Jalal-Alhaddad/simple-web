@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Native JSX vs Non-JSX Examples</title>
+  <!-- Prism CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.min.css" rel="stylesheet">
+  <!-- Prism JSX syntax highlighting plugin -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.css"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/components/prism-jsx.min.js" rel="stylesheet">
+</head>
+
+<body>
+
+  <h2>Creating a React Native Component without JSX:</h2>
+  <pre><code class="language-javascript">
+const React = require('react');
+const { View, Text } = require('react-native');
+
+// Non-JSX way to create a component
+const MyComponentWithoutJSX = function(props) {
+  return React.createElement(
+    View,
+    null,
+    React.createElement(
+      Text,
+      null,
+      'Hello, ',
+      props.name
+    ),
+    React.createElement(
+      View,
+      null,
+      React.createElement(
+        Text,
+        null,
+        'This is another view'
+      )
+    )
+  );
+};
+
+module.exports = MyComponentWithoutJSX;
+</code></pre>
+
+  <h2>Creating a React Native Component with JSX:</h2>
+  <pre><code class="language-jsx">
+import React from 'react';
+import { View, Text } from 'react-native';
+
+// JSX way to create a component
+const MyComponentWithJSX = (props) => {
+  return (
+    &lt;View&gt; {/* This gets translated to a native View component */}
+      &lt;Text&gt;Hello, {props.name}&lt;/Text&gt;
+      &lt;View&gt; {/* This also gets translated to a native View component */}
+        &lt;Text&gt;This is another view&lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  );
+};
+
+export default MyComponentWithJSX;
+</code></pre>
+
+  <!-- Prism JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/components/prism-jsx.min.js"></script>
+</body>
+
+</html>

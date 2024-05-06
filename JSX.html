@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Native JSX vs Non-JSX Examples</title>
+  <!-- Prism CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <h2>Creating a React Native Component without JSX:</h2>
+  <pre><code class="language-javascript">
+const React = require('react');
+const { View, Text } = require('react-native');
+
+// Non-JSX way to create a component
+const MyComponentWithoutJSX = function(props) {
+  return React.createElement(
+    View,
+    null,
+    React.createElement(
+      Text,
+      null,
+      'Hello, ',
+      props.name
+    )
+  );
+};
+
+module.exports = MyComponentWithoutJSX;
+</code></pre>
+
+  <h2>Creating a React Native Component with JSX:</h2>
+  <pre><code class="language-javascript">
+import React from 'react';
+import { View, Text } from 'react-native';
+
+// JSX way to create a component
+const MyComponentWithJSX = (props) => {
+  return (
+    <View>
+      <Text>Hello, {props.name}</Text>
+    </View>
+  );
+};
+
+export default MyComponentWithJSX;
+</code></pre>
+
+  <!-- Prism JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0"></script>
+</body>
+
+</html>
