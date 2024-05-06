@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Samples</title>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      /* justify-content: space-between; */
+      align-items: center;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .box1 {
+      background-color: #FF4136;
+    }
+
+    .box2 {
+      background-color: #0074D9;
+      height: 150px;
+    }
+
+    .box3 {
+      background-color: #2ECC40;
+    }
+
+    .box4 {
+      background-color: #FF851B;
+    }
+
+    .box5 {
+      background-color: #B10DC9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Sample 1: Align Center</h2>
+  <div class="container" style="align-items: center;">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </div>
+
+  <h2>Sample 2: Align Start</h2>
+  <div class="container" style="align-items: flex-start;">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </div>
+
+  <h2>Sample 3: Align End</h2>
+  <div class="container" style="align-items: flex-end;">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </div>
+
+  <h2>Sample 4: Justify Center</h2>
+  <div class="container" style="justify-content: center;">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </div>
+
+  <h2>Sample 5: Justify Start</h2>
+  <div class="container" style="justify-content: flex-start;">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </div>
+
+  <h2>Sample 6: Justify End</h2>
+  <div class="container" style="justify-content: flex-end;">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </div>
+
+</body>
+
+</html>
