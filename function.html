@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Function Examples</title>
+  <!-- Prism CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <h2>1. Function Declaration using <code>function</code> keyword:</h2>
+  <pre><code class="language-javascript">
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+
+console.log(greet("Alice")); // Output: Hello, Alice!
+</code></pre>
+
+  <h2>2. Function Expression:</h2>
+  <pre><code class="language-javascript">
+const greet = function(name) {
+  return "Hello, " + name + "!";
+};
+
+console.log(greet("Bob")); // Output: Hello, Bob!
+</code></pre>
+
+  <h2>3. Arrow Function:</h2>
+  <pre><code class="language-javascript">
+const greet = (name) => {
+  return "Hello, " + name + "!";
+};
+
+console.log(greet("Charlie")); // Output: Hello, Charlie!
+</code></pre>
+
+  <h2>4. Arrow Function with Implicit Return:</h2>
+  <pre><code class="language-javascript">
+const greet = (name) => "Hello, " + name + "!";
+
+console.log(greet("David")); // Output: Hello, David!
+</code></pre>
+
+  <h2>5. Arrow Function with Single Parameter:</h2>
+  <pre><code class="language-javascript">
+const greet = name => "Hello, " + name + "!";
+
+console.log(greet("Emily")); // Output: Hello, Emily!
+</code></pre>
+
+  <h2>6. Arrow Function with No Parameters:</h2>
+  <pre><code class="language-javascript">
+const greet = () => "Hello, World!";
+
+console.log(greet()); // Output: Hello, World!
+</code></pre>
+
+<h2>7. Arrow Function with Return Statement:</h2>
+<pre><code class="language-javascript">
+const add = (a, b) => {
+  return a + b;
+};
+
+console.log(add(3, 5)); // Output: 8
+</code></pre>
+
+  <!-- Prism JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0"></script>
+</body>
+
+</html>
